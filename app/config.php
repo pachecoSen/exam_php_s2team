@@ -4,6 +4,8 @@ define('URI', $_SERVER['REQUEST_URI']);
 
 define('REQUEST', $_SERVER['REQUEST_METHOD']);
 
+define('REQUEST_TYPE', isset($_SERVER['CONTENT_TYPE']) ? $_SERVER['CONTENT_TYPE'] : null);
+
 define('DEFAULT_CONTROLLER', 'Home');
 define('DEFAULT_METHOD', 'Index');
 

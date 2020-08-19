@@ -21,6 +21,6 @@ abstract class DB{
     }
 
     abstract protected function insert();
-
     abstract protected function query();
+    abstract protected function delete();
 }

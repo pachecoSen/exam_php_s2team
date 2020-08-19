@@ -47,8 +47,17 @@ class Router{
      * setParam
      */
     private function setParam(){
-        if(REQUEST === 'POST')
-            $this->param = $_POST;
+        if(REQUEST === 'POST'){
+            $type = REQUEST_TYPE;
+            if(isset($type)){
+                if('application/json' === REQUEST_TYPE){
+                    $data = file_get_contents('php://input');
+                    $this->param = json_decode($data);
+                }
+            }
+            else
+                $this->param = $_POST;
+        }
         else{
             if(REQUEST === 'GET')
                 $this->param = !isset($this->uri[4]) ? '' : $this->uri[4];

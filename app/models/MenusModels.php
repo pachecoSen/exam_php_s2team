@@ -1,5 +1,5 @@
 <?php
-require PATH_CORE.'model.php';
+require_once PATH_CORE.'model.php';
 
 /**
  * RegistryModels
@@ -16,5 +16,13 @@ class MenusModels extends Model{
         }, ARRAY_FILTER_USE_BOTH);
 
         return $this->setData($req)->insert();
+    }
+
+    public function columna($req){
+        return $this->setData($req)->query();
+    }
+
+    public function del($req){
+        return $this->setData($req)->delete();
     }
 }
