@@ -1,15 +1,19 @@
 <?php
 
-define(URI, $_SERVER['REQUEST_URI']);
+define('URI', $_SERVER['REQUEST_URI']);
 
-define(DEFAULT_CONTROLLER, 'Home');
+define('REQUEST', $_SERVER['REQUEST_METHOD']);
 
-define(DEFAULT_METHOD, 'Index');
+define('DEFAULT_CONTROLLER', 'Home');
+define('DEFAULT_METHOD', 'Index');
 
-define(ROOT, $_SERVER['DOCUMENT_ROOT']);
+define('ROOT', $_SERVER['DOCUMENT_ROOT']);
+define('FOLDER_PATH', '/exam_php_s2team');
+define('PATH_CORE', 'app/core/');
+define('PATH_CONTROLLER', 'app/controllers/');
+define('PATH_VIEW', 'app/views/');
+define('PATH_MODEL', 'app/models/');
 
-define(FOLDER_PATH, '/exam_php_s2team');
-
-define(PATH_CONTROLLER, 'app/controller/');
-
-define(PATH_VIEW, 'app/view/');
+define('DSN', 'mysql:host=localhost;dbname=exam_s2_team');
+define('USER', 's2_team');
+define('PASSWORD', "/*S2_Team*/");
